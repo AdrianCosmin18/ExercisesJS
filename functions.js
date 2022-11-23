@@ -35,3 +35,50 @@ function addProduct(product, products){
     products.push(product);
 }
 
+//functie care ret o lista de denumiri de produse care sa apara o sg data
+function getProductsDistinctByOptiune(optiune, products){
+    let v = [];
+    v.push("Deschide pentru a filtra dupa denumirea produsului");
+    for (let i = 0; i < products.length; i++){
+        if (v.includes(products[i][`${optiune}`]) === false){
+            v.push(products[i][`${optiune}`]);
+        }
+    }
+    return v;
+}
+
+//functie care returneaza un option pentru filtrare
+function createOption(option){
+    return `
+        <option value="${option}">${option}</option>
+    `;
+}
+
+//functie care ret lista de optiuni pentru filtrari
+function createFilterOptions(listaOptiuniFiltrare){
+    let text = "";
+    listaOptiuniFiltrare.forEach(optiune => {
+        text += createOption(optiune);
+    })
+    return text;
+}
+
+//fct care ret toare produsele
+function getAllProducts(products){
+    let v = [];
+    for (let i = 0; i < products.length; i++){
+        v.push(products[i]);
+    }
+    return v;
+}
+
+//functie care ret toate produsele cu aceeasi denumire o sg data
+function getProductsByDenumire(nume, products){
+    let v = [];
+    for (let i = 0; i < products.length; i++){
+        if (products[i].denumire === nume){
+            v.push(products[i]);
+        }
+    }
+    return v;
+}
