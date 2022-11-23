@@ -1,0 +1,34 @@
+table{
+    border-collapse: separate;
+    width: 50%;
+    /*overflow: hidden;*/
+}
+
+table th,td{
+    text-align: left;
+    padding: 6px 15px 6px 15px;
+    font-size: 20px;
+}
+
+thead {
+    background-color: darkgray;
+    color: black;
+}
+
+.firstLine th {
+    font-size: 15px;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    border-bottom: 3px solid #cfb59b;
+}
+
+tbody th,
+td {
+    background-color: #daeff1;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.table-container tr{
+    background-color: #e6e7e3;
+}
